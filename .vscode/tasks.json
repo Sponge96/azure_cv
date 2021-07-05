@@ -2,6 +2,23 @@
 	"version": "2.0.0",
 	"tasks": [
 		{
+			"label": "pipInstall",
+			"type": "shell",
+			"osx": {
+				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+			},
+			"windows": {
+				"command": "${config:azureFunctions.pythonVenv}\\Scripts\\python -m pip install -r requirements.txt"
+			},
+			"linux": {
+				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
+			},
+			"problemMatcher": [],
+			"options": {
+				"cwd": "${workspaceFolder}/backend\\api"
+			}
+		},
+		{
 			"label": "clean",
 			"command": "dotnet",
 			"args": [
@@ -69,30 +86,13 @@
 		},
 		{
 			"type": "func",
+			"dependsOn": "build",
+			"options": {
+				"cwd": "${workspaceFolder}/backend\\api/bin/Debug/netcoreapp3.1"
+			},
 			"command": "host start",
-			"problemMatcher": "$func-python-watch",
 			"isBackground": true,
-			"dependsOn": "pipInstall",
-			"options": {
-				"cwd": "${workspaceFolder}/backend\\api"
-			}
-		},
-		{
-			"label": "pipInstall",
-			"type": "shell",
-			"osx": {
-				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
-			},
-			"windows": {
-				"command": "${config:azureFunctions.pythonVenv}\\Scripts\\python -m pip install -r requirements.txt"
-			},
-			"linux": {
-				"command": "${config:azureFunctions.pythonVenv}/bin/python -m pip install -r requirements.txt"
-			},
-			"problemMatcher": [],
-			"options": {
-				"cwd": "${workspaceFolder}/backend\\api"
-			}
+			"problemMatcher": "$func-dotnet-watch"
 		}
 	]
 }
