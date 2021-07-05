@@ -1,3 +1,2 @@
-# azure_cv
-My personal Azure CV.
-- FrontEnd folder contains website.
+# azure_cv (WIP)
+My personal Azure CV following along to ACG's guide.
