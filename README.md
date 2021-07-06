@@ -12,4 +12,4 @@ main.js contains a function triggered on DOMContentLoaded then fetches data via 
 ## Conclusion
 Although I managed to get everything operational and understood most of the concepts, I felt it would be improper to use the C# Azure Function. My understanding of Azure functions still has some way to go. Once able to code this section myself in my programming language of choice (Python), I'll feel much more comfortable displaying the counter as my own.
 
-The site is now live at: https://www.jackpickett.me (without the counter)
+The site is now live at: https://www.jackpickett.me (without the visitor counter)
