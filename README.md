@@ -15,4 +15,4 @@ Although I managed to get everything operational and understood most of the conc
 The site is now live at: https://www.jackpickett.me (without the visitor counter)
 
 ## Update
-Created new Python function after researching further. Really happy I was able to get this working!
+Created a new Python function after researching further. Really happy I was able to get this working with my own Python function instead of purely using the video assets.
